@@ -1,0 +1,30 @@
+server:
+  host: "0.0.0.0"
+  port: 8888
+
+kcp:
+  # KCP 配置
+  # nodelay: 0-1, interval: 10-100ms, resend: 0-2, nc: 0-1
+  nodelay: 1
+  interval: 10
+  resend: 2
+  nc: 1
+  # 窗口大小
+  sndwnd: 1024
+  rcvwnd: 1024
+
+game:
+  # 帧率 (fps)
+  frame_rate: 60
+  # 每帧时间 (ms)
+  frame_time: 16
+  # 最大房间数
+  max_rooms: 1000
+  # 每房间最大玩家数
+  max_players_per_room: 8
+  # 输入超时 (帧数)
+  input_timeout_frames: 30
+
+log:
+  level: "debug"
+  format: "console"
